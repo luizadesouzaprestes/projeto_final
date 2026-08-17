@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -12,7 +13,7 @@
 <header>
     <div class="logo">
         <a href="index.html">
-            <img src="logo_completo.png" alt="Logo do Acervo">
+            <img src="logo_completo.png">
         </a>
     </div>
 
@@ -25,8 +26,6 @@
         <button class="botao_menu" id="btn_menu" aria-label="Abrir menu">
             <img src="botao_menu.svg" alt="Menu" class="icone_menu">
         </button>
-
-        <!-- ARRUMAR MENU
         
         <ul class="lista_menu" id="lista_menu">
             <li class="opcao_menu"><a class="link_menu" href="entrar.html">Cadastrar</a></li>
@@ -34,10 +33,41 @@
             <li class="opcao_menu"><a class="link_menu" href="galeria.html">Minha Galeria</a></li>
             <li class="opcao_menu"><a class="link_menu" href="index.html">Sair</a></li>
         </ul>
-        -->
 
     </div>
 </header>
+
+<main>
+
+    <section class="cabecalho_galeria">
+        <div class="info_artista">
+            <img src="foto_artista.png" alt="Perfil" class="icone_perfil">
+            <h1 class="titulo_galeria">MINHA GALERIA</h1>
+        </div>
+
+        <a href="cadastrar_obra.html" class="btn_adicionar_obra" title="Adicionar obra">
+            <img src="icon_adicionar.svg" alt="Adicionar" class="icone_adicionar">
+        </a>
+    </section>
+
+    <section class="grid_galeria">
+
+        <div class="card_obra">
+            <a href="detalhes.html?id={{ obra.id }}" class="link_obra">
+        <img src="{{ obra.imagem_url }}" class="imagem_obra">
+            </a>
+        <div class="rodape_card">
+            <h2 class="nome_obra">Nome Obra</h2>
+            <button class="btn_curtir" type="button">
+                <img src="coracao.svg" alt="Curtir" class="icone_curtir">
+                <span class="contador_curtidas">24</span>
+            </button>
+        </div>
+    </div>
+
+    </section>
+
+</main>
 
 <!-- RODAPÉ -->
 <footer>
