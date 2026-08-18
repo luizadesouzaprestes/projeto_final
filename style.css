@@ -9,17 +9,20 @@
     /* Texto e Bordas */
     --cor-texto: #2c2b26;
     --cor-texto-suave: #6b685c;
-    --cor-borda: #e2dcc5;
+    --cor-borda-sombra: #e2dcc5;
+    --cor-borda-luz: white;
     --cor-card: #ffffff;
     
     /* Fontes e Raios */
     --fonte-padrao: Arial, Helvetica, sans-serif;
     --raio-borda-s: 4px;
-    --raio-borda-m: 8px;
-    --raio-borda-l: 16px;
+    --raio-borda-m: 14px;
+    --raio-borda-g: 18px;
 }
 
 body {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     font-family: var(--fonte-padrao);
@@ -35,7 +38,9 @@ header {
     gap: 1rem;
     padding: 0.8rem 2rem;
     background-color: var(--cor-cabecalho);
-    border-bottom: 1px solid var(--cor-borda);
+    border-top: 2px solid var(--cor-borda-luz);
+    border-bottom: 3px solid var(--cor-borda-sombra);
+    border-radius: var(--raio-borda-m);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -86,6 +91,8 @@ header {
     background-color: var(--cor-destaque-hover);
 }
 
+/*MENU*/
+
 /* deixar o menuzinho onde está o botão*/
 .menu {
     position: relative;
@@ -102,7 +109,12 @@ header {
     width: 24px;
     height: 24px;
     display: block;
-    transition: transform 0.2s ease;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.icone_menu:hover {
+    opacity: 1;
 }
 
 .lista_menu {
@@ -163,6 +175,8 @@ header {
     color: var(--cor-texto);
 }
 
+/*CABEÇALHO GALERIA*/
+
 .cabecalho_galeria {
     display: flex;
     justify-content: space-between;
@@ -178,15 +192,19 @@ header {
     gap: 0.75rem;
 }
 
-.btn_adicionar_obra {
-    color: var(--cor-texto);
-    display: flex;
+.btn_adicionar_obra{
     align-items: center;
-    transition: transform 0.2s;
+    padding: 0.5%;
 }
 
-.btn_adicionar_obra:hover {
-    transform: scale(1.1);
+.icone_adicionar {
+    display: flex;
+    height: 50px;
+    transition: opacity 0.7;
+}
+
+.icone_adicionar:hover {
+    opacity: 1;
 }
 
 .grid_galeria {
@@ -195,6 +213,8 @@ header {
     gap: 1.5rem;
 }
 
+/*OBRAS*/
+
 .card_obra {
     background-color: var(--cor-card);
     border: 1px solid var(--cor-borda);
@@ -202,12 +222,11 @@ header {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s;
 }
 
 .card_obra:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    transform: scale(1.015);
 }
 
 .link_obra {
@@ -246,9 +265,13 @@ header {
     color: var(--cor-texto-suave);
 }
 
+/*RODAPÉ*/
+
 footer {
     background-color: var(--cor-cabecalho);
-    border-top: 1px solid var(--cor-borda);
+    border-top: 2px solid var(--cor-borda-luz);
+    border-bottom: 3px solid var(--cor-borda-sombra);
+    border-radius: var(--raio-borda-m);
     padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -274,9 +297,9 @@ footer a:hover {
 .contato img {
     width: 20px;
     height: 20px;
-    color: var(--cor-destaque);
+    opacity: 0.5;
 
-    transition: transform 0.2s ease; 
+    transition: transform 0.2s ease;
 }
 
 .contato a:hover img {
