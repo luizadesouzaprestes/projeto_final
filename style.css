@@ -91,13 +91,18 @@ header {
     position: relative;
 }
 
-.botao_menu:hover {
-    background-color: rgba(0, 0, 0, 0.05); /* Efeito sutil ao passar o mouse */
+.botao_menu{
+    background-color: transparent; /* Deixa o fundo 100% transparente */
+    border: none;                  /* Remove qualquer borda padrão */
+    outline: none;                 /* Remove a linha azul/preta padrão ao focar */
+    cursor: pointer;
 }
 
 .icone_menu {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
+    display: block;
+    transition: transform 0.2s ease;
 }
 
 .lista_menu {
@@ -119,16 +124,25 @@ header {
 }
 
 .opcao_menu a {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     padding: 0.75rem 1.2rem;
     color: var(--cor-texto);
     text-decoration: none;
     font-size: 0.9rem;
+
     transition: background-color 0.2s;
 }
 
+.icone_opcao_menu {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
 .opcao_menu a:hover {
-    background-color: var(--cor_fundo, #fffbea); /* Muda a cor de fundo no hover */
+    background-color: var(--cor_fundo, #fffbea);
     color: #000;
 }
 
@@ -260,4 +274,11 @@ footer a:hover {
 .contato img {
     width: 20px;
     height: 20px;
+    color: var(--cor-destaque);
+
+    transition: transform 0.2s ease; 
+}
+
+.contato a:hover img {
+    transform: scale(1.05);
 }
