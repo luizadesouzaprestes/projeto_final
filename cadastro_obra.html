@@ -3,31 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
+    <title>Cadastro Obra</title>
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+
 </head>
 <body>
 
-<!-- CABEÇALHO -->
 <header>
+    <!-- logo provisório -->
     <div class="logo">
         <a href="index.html">
-            <img src="logo_completo.png">
+        <img src="logo_completo.png">
         </a>
     </div>
 
+    <!-- campo de pesquisa -->
     <form class="pesquisa">
         <input type="search" placeholder="Pesquisar arte/artista" class="campo_pesquisa">
         <button type="submit" class="botao_pesquisa">Pesquisar</button>    
     </form>
 
+    <!-- menuzinho lateral -->
     <div class="menu">
-        <button class="botao_menu" aria-label="Abrir menu">
+        <button class="botao_menu">
             <img src="icones/botao_menu.svg" alt="Menu" class="icone_menu">
-        </button>
-        
-        <ul class="lista_menu" id="lista_menu">
+            </button>
+
+            <ul class="lista_menu" id="lista_menu">
                 <li class="opcao_menu">
                     <a class="link_menu" href="entrar.html">
                     <img src="icones/icone_menu_entrar.svg" class="icone_opcao_menu">Entrar
@@ -45,57 +49,45 @@
                 </li>
 
             </ul>
-
     </div>
+
 </header>
 
-<main>
+<main class="conteudo_principal">
+    <section class="caixa_formulario">
+        <h3 class="titulo_formulario">Adicionar Nova Obra</h3>
+        
+        <form class="formulario">
+            <div class="grupo_campo">
+                <label for="titulo_obra" class="rotulo_campo">Nome da Obra</label>
+                <input type="text" id="titulo_obra" class="campo_input" placeholder="Ex: Estudo de Formas" required>
+            </div>
 
-    <section class="cabecalho_galeria">
-        <div class="info_artista">
-            <img src="foto_artista.png" alt="Perfil" class="icone_perfil">
-            <h1 class="titulo_galeria">MINHA GALERIA</h1>
+            <div class="grupo_campo">
+                <label for="imagem_obra_input" class="rotulo_campo">Selecione a Imagem (PNG)</label>
+                <input type="file" id="imagem_obra_input" class="campo_input_file" required>
+            </div>
 
-            <a href="editperfil.html" class="btn_editar_perfil" title="Editar perfil">
-                <img src="icones/icon_editar.svg" alt="Editar Perfil" class="icone_opcao_menu">
-            </a>
-        </div>
+            <div class="grupo_campo">
+                <label for="descricao_obra" class="rotulo_campo">Descrição da Obra</label>
+                <textarea id="descricao_obra" class="campo_textarea" rows="4" placeholder="Descreva o conceito, técnica ou contexto."></textarea>
+            </div>
 
-        <a href="cadastro_obra.html" class="btn_adicionar_obra" title="Adicionar obra">
-            <img src="icones/icon_adicionar.svg" alt="Adicionar" class="icone_adicionar">
-        </a>
+            <button type="submit" class="btn_submit">Publicar Obra</button>
+        </form>
     </section>
-
-    <section class="grid_galeria">
-
-        <div class="card_obra">
-            <a href="detalhes.html?id={{ obra.id }}" class="link_obra">
-        <img src="{{ obra.imagem_url }}" class="imagem_obra">
-            </a>
-        <div class="rodape_card">
-            <h2 class="nome_obra">Nome Obra</h2>
-            <button class="btn_curtir" type="button">
-                <img src="coracao.svg" alt="Curtir" class="icone_curtir">
-                <span class="contador_curtidas">24</span>
-            </button>
-        </div>
-    </div>
-
-    </section>
-
 </main>
 
-<!-- RODAPÉ -->
 <footer>
     <div class="sobre">
         <a href="about.html">Sobre o Acervo</a>
     </div>
     <div class="contato">
         <a href="link instagram" aria-label="Instagram">
-            <img src="icon_instagram.svg" alt="Instagram">
+            <img src="icones/icon_instagram.svg" alt="Instagram">
         </a>
         <a href="link email" aria-label="E-mail">
-            <img src="icon_email.svg" alt="E-mail">
+            <img src="icones/icon_email.svg" alt="E-mail">
         </a>
     </div>
 </footer>

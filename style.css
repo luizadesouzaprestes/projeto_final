@@ -5,6 +5,7 @@
     --cor-cabecalho: #f5f0d8;
     --cor-destaque: #e8deaa;
     --cor-destaque-hover: #d3c78d;
+    --cor-borda: #e2dcc5;
     
     /* Texto e Bordas */
     --cor-texto: #2c2b26;
@@ -304,4 +305,178 @@ footer a:hover {
 
 .contato a:hover img {
     transform: scale(1.05);
+}
+
+/*FORMS*/
+
+.botoes_formulario, 
+.acoes_formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.btn_submit {
+    padding: 0.68rem 1.2rem;
+    background-color: var(--cor-destaque);
+    border: 1px solid var(--cor-borda-sombra);
+    border-radius: var(--raio-borda-m);
+    cursor: pointer;
+    font-family: var(--fonte-padrao);
+    font-weight: bold;
+    color: var(--cor-texto);
+    transition: background-color 0.2s;
+}
+
+.btn_submit:hover {
+    background-color: var(--cor-destaque-hover);
+}
+
+.btn_secundario {
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: normal;
+    text-align: center;
+    border: none;
+    padding: 0.5rem 0;
+}
+
+.btn_secundario:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.opcoes_tipo_conta {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.opcao_card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.opcao_card .conteudo_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.2rem;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda-sombra);
+    border-radius: var(--raio-borda-m);
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--cor-texto-suave);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+    flex: 1;
+    text-align: center;
+}
+
+.opcao_card:hover .conteudo_card {
+    border-color: var(--cor-destaque-hover);
+    color: var(--cor-texto);
+}
+
+.opcao_card input[type="radio"]:checked + .conteudo_card {
+    background-color: var(--cor-destaque);
+    border-color: var(--cor-destaque-hover);
+    color: var(--cor-texto);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.opcao_card input[type="radio"]:focus-visible + .conteudo_card {
+    outline: 2px solid var(--cor-texto-suave);
+}
+
+.caixa_formulario, 
+.caixa_sobre {
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda-sombra);
+    border-radius: var(--raio-borda-m);
+    padding: 2rem;
+    max-width: 480px;
+    margin: 1rem auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.titulo_formulario {
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    color: var(--cor-texto);
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.grupo_campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.rotulo_campo {
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
+    font-weight: bold;
+}
+
+/*INPUTS CAMPOS*/
+
+.campo_input, 
+.campo_textarea, 
+.campo_input_file {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda-sombra);
+    border-radius: var(--raio-borda-s);
+    font-family: var(--fonte-padrao);
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.campo_input:focus, 
+.campo_textarea:focus {
+    border-color: var(--cor-texto-suave);
+}
+
+.campo_textarea {
+    resize: vertical;
+}
+
+/*SOBRE*/
+
+.texto_sobre {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+}
+
+.btn_editar_perfil {
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.btn_editar_perfil:hover {
+    opacity: 1;
 }

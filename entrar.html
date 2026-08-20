@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <!-- logo provisório -->
+        <div class="logo">
+            <a href="index.html">
+            <img src="logo_completo.png">
+            </a>
+        </div>
+
+        <!-- campo de pesquisa -->
+        <form class="pesquisa">
+            <input type="search" placeholder="Pesquisar arte/artista" class="campo_pesquisa">
+            <button type="submit" class="botao_pesquisa">Pesquisar</button>    
+        </form>
+
+        <!-- menuzinho lateral -->
+        <div class="menu">
+            <button class="botao_menu">
+                <img src="icones/botao_menu.svg" alt="Menu" class="icone_menu">
+                </button>
+
+                <ul class="lista_menu" id="lista_menu">
+                    <li class="opcao_menu">
+                        <a class="link_menu" href="entrar.html">
+                        <img src="icones/icone_menu_entrar.svg" class="icone_opcao_menu">Entrar
+                        </a>
+                    </li>
+                    <li class="opcao_menu">
+                        <a class="link_menu" href="galeria.html">
+                        <img src="icones/icone_menu_galeria.svg" class="icone_opcao_menu">Minha Galeria
+                        </a>
+                    </li>
+                    <li class="opcao_menu">
+                        <a class="link_menu" href="index.html">
+                        <img src="icones/icone_menu_sair.svg" class="icone_opcao_menu">Sair
+                        </a>
+                    </li>
+
+                </ul>
+        </div>
+
+    </header>
+
+    <main class="conteudo_principal">
+    <section class="caixa_formulario">
+        <h2 class="titulo_formulario">Login</h2>
+        
+        <form class="formulario">
+            <div class="grupo_campo">
+                <label for="email_login" class="rotulo_campo">Email:</label>
+                <input type="email" id="email_login" class="campo_input" placeholder="seuemail@exemplo.com" required>
+            </div>
+
+            <div class="grupo_campo">
+                <label for="senha_login" class="rotulo_campo">Senha:</label>
+                <input type="password" id="senha_login" class="campo_input" placeholder="••••••••" required>
+            </div>
+
+            <!-- Área de erro conforme a validação -->
+            <div class="mensagem_erro" id="mensagem_erro_login" style="display: none;">
+                Email ou senha incorretos.
+            </div>
+
+            <div class="acoes_formulario">
+                <a href="cadastrO_usuario.html" class="botao_pesquisa btn_secundario">Não possuo conta / fazer cadastro</a>
+                <button type="submit" class="botao_pesquisa btn_submit">Entrar</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="sobre">
+        <a href="about.html">Sobre o Acervo</a>
+    </div>
+    <div class="contato">
+        <a href="link instagram" aria-label="Instagram">
+            <img src="icones/icon_instagram.svg" alt="Instagram">
+        </a>
+        <a href="link email" aria-label="E-mail">
+            <img src="icones/icon_email.svg" alt="E-mail">
+        </a>
+    </div>
+</footer>
+    
+</body>
+</html>
