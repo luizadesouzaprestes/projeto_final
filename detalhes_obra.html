@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes Obra 1
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- CABEÇALHO -->
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo/logo_completo_prov.png">
+        </a>
+    </div>
+
+    <form class="pesquisa">
+        <input type="search" placeholder="Pesquisar arte/artista" class="campo_pesquisa">
+        <button type="submit" class="botao_padrao">Pesquisar</button>    
+    </form>
+
+    <div class="menu">
+        <button class="botao_menu" aria-label="Abrir menu">
+            <img src="icones/botao_menu.svg" alt="Menu" class="icone_menu">
+        </button>
+        
+        <ul class="lista_menu" id="lista_menu">
+                <li class="opcao_menu">
+                    <a class="link_menu" href="entrar.html">
+                    <img src="icones/icone_menu_entrar.svg" class="icone_opcao_menu">Entrar
+                    </a>
+                </li>
+                <li class="opcao_menu">
+                    <a class="link_menu" href="galeria.html">
+                    <img src="icones/icone_menu_galeria.svg" class="icone_opcao_menu">Minha Galeria
+                    </a>
+                </li>
+                <li class="opcao_menu">
+                    <a class="link_menu" href="sair.html">
+                    <img src="icones/icone_menu_sair.svg" class="icone_opcao_menu">Sair
+                    </a>
+                </li>
+
+            </ul>
+
+    </div>
+</header>
+
+    <main class="conteudo_principal">
+        <article class="painel_detalhe_obra">
+            
+            <!-- Expositor da obra recebe .borda-branca, .moldura-classica ou .totem-exposicao -->
+            <div class="palco_obra expositor_obra moldura-classica">
+                <img src="img_obras/obra1_1.jpg" alt="Rabisco" class="imagem_obra_principal">
+                <div class="camada_expositor"></div>
+            </div>
+
+            <div class="ficha_obra">
+                <div class="topo_ficha">
+                    <div class="identificacao_obra">
+                        <h1 class="titulo_obra_destaque">Rabisco</h1>
+                        <p class="autor_obra_destaque">
+                            Por: <a href="galeria.html" class="link_artista">Risco Rabisco</a>
+                        </p>
+                    </div>
+
+                    <button class="btn_curtir" type="button" aria-label="Curtir obra">
+                        <img src="icones/icon_coracao.svg" alt="Curtir">
+                        <span>12</span>
+                    </button>
+                </div>
+
+                <div class="bloco_descricao">
+                    <span class="rotulo_campo">Descrição da Obra</span>
+                    <p class="texto_sobre">
+                        Um rabisco.
+                    </p>
+                </div>
+
+                <div class="rodape_ficha">
+                    <a href="index.html" class="btn_secundario"> Voltar à galeria</a>
+                </div>
+            </div>
+
+        </article>
+    </main>
