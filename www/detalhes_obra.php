@@ -11,45 +11,7 @@
 </head>
 <body>
 
-<!-- CABEÇALHO -->
-<header>
-    <div class="logo">
-        <a href="index.html">
-            <img src="logo/logo_completo_prov.png">
-        </a>
-    </div>
-
-    <form class="pesquisa">
-        <input type="search" placeholder="Pesquisar arte/artista" class="campo_pesquisa">
-        <button type="submit" class="botao_padrao">Pesquisar</button>    
-    </form>
-
-    <div class="menu">
-        <button class="botao_menu" aria-label="Abrir menu">
-            <img src="icones/botao_menu.svg" alt="Menu" class="icone_menu">
-        </button>
-        
-        <ul class="lista_menu" id="lista_menu">
-                <li class="opcao_menu">
-                    <a class="link_menu" href="entrar.html">
-                    <img src="icones/icone_menu_entrar.svg" class="icone_opcao_menu">Entrar
-                    </a>
-                </li>
-                <li class="opcao_menu">
-                    <a class="link_menu" href="galeria.html">
-                    <img src="icones/icone_menu_galeria.svg" class="icone_opcao_menu">Minha Galeria
-                    </a>
-                </li>
-                <li class="opcao_menu">
-                    <a class="link_menu" href="sair.html">
-                    <img src="icones/icone_menu_sair.svg" class="icone_opcao_menu">Sair
-                    </a>
-                </li>
-
-            </ul>
-
-    </div>
-</header>
+<?php include 'includes/header.php'; ?>
 
     <main class="conteudo_principal">
         <article class="painel_detalhe_obra">
@@ -65,7 +27,7 @@
                     <div class="identificacao_obra">
                         <h1 class="titulo_obra_destaque">Rabisco</h1>
                         <p class="autor_obra_destaque">
-                            Por: <a href="galeria.html" class="link_artista">Risco Rabisco</a>
+                            Por: <a href="galeria.php" class="link_artista">Risco Rabisco</a>
                         </p>
                     </div>
 
@@ -83,7 +45,7 @@
                 </div>
 
                 <div class="rodape_ficha">
-                    <a href="index.html" class="btn_secundario"> Voltar à galeria</a>
+                    <a href="galeria.php" class="btn_secundario"> Voltar à galeria</a>
                 </div>
             </div>
 

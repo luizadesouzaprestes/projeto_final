@@ -738,3 +738,7 @@ footer a:hover {
 .botao_secundario:hover {
     background-color: var(--cor-card);
 }
+
+.opcoes_exposicao {
+    flex-wrap: wrap;
+}

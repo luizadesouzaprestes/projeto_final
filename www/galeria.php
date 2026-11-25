@@ -10,58 +10,20 @@
 </head>
 <body>
 
-<!-- CABEÇALHO -->
-<header>
-    <div class="logo">
-        <a href="index.html">
-            <img src="logo/logo_completo_prov.png">
-        </a>
-    </div>
-
-    <form class="pesquisa">
-        <input type="search" placeholder="Pesquisar arte/artista" class="campo_pesquisa">
-        <button type="submit" class="botao_padrao">Pesquisar</button>    
-    </form>
-
-    <div class="menu">
-        <button class="botao_menu" aria-label="Abrir menu">
-            <img src="icones/botao_menu.svg" alt="Menu" class="icone_menu">
-        </button>
-        
-        <ul class="lista_menu" id="lista_menu">
-                <li class="opcao_menu">
-                    <a class="link_menu" href="entrar.html">
-                    <img src="icones/icone_menu_entrar.svg" class="icone_opcao_menu">Entrar
-                    </a>
-                </li>
-                <li class="opcao_menu">
-                    <a class="link_menu" href="galeria.html">
-                    <img src="icones/icone_menu_galeria.svg" class="icone_opcao_menu">Minha Galeria
-                    </a>
-                </li>
-                <li class="opcao_menu">
-                    <a class="link_menu" href="sair.html">
-                    <img src="icones/icone_menu_sair.svg" class="icone_opcao_menu">Sair
-                    </a>
-                </li>
-
-            </ul>
-
-    </div>
-</header>
+<?php include 'includes/header.php'; ?>
 
 <main class="conteudo_principal">
 
     <section class="cabecalho_galeria">
         <div class="info_artista">
-            <a href="editperfil.html" class="btn_editar_perfil" title="Editar perdil">
+            <a href="editperfil.php" class="btn_editar_perfil" title="Editar perdil">
                 <img src="icones/icon_perfil.svg" alt="Perfil" class="icone_perfil">
             </a>
             <h1 class="titulo_galeria">RISCO RABISCO</h1>
 
         </div>
 
-        <a href="cadastro_obra.html" class="btn_adicionar_obra" title="Adicionar obra">
+        <a href="cadastro_obra.php" class="btn_adicionar_obra" title="Adicionar obra">
             <img src="icones/icon_adicionar.svg" alt="Adicionar" class="icone_adicionar">
         </a>
     </section>
@@ -71,13 +33,13 @@
         <!-- OBRA 1 -->
 
         <div class="card_obra">
-            <a href="detalhes_obra.html" class="link_obra">
+            <a href="detalhes_obra.php" class="link_obra">
                 <img src="img_obras/obra1_1.jpg" class="imagem_obra">
             </a>
             <div class="rodape_card">
                 <h2 class="nome_obra">Rabisco</h2>
                 <button class="btn_curtir" type="button">
-                    <a href="entrar.html" title="Entrar">
+                    <a href="entrar.php" title="Entrar">
                     <img src="icones/icon_coracao.svg" alt="Curtir" class="icone_curtir">
                     </a>
                     <span class="contador_curtidas">0</span>
@@ -88,13 +50,13 @@
         <!-- OBRA 2 -->
 
         <div class="card_obra">
-            <a href="detalhes_obra.html" class="link_obra">
+            <a href="detalhes_obra.php" class="link_obra">
                 <img src="img_obras/obra2_1.jpg" class="imagem_obra">
             </a>
             <div class="rodape_card">
                 <h2 class="nome_obra">Linha</h2>
                 <button class="btn_curtir" type="button">
-                    <a href="entrar.html" title="Entrar">
+                    <a href="entrar.php" title="Entrar">
                     <img src="icones/icon_coracao.svg" alt="Curtir" class="icone_curtir">
                     </a>
                     <span class="contador_curtidas">0</span>
@@ -105,13 +67,13 @@
         <!-- OBRA 3 -->
 
         <div class="card_obra">
-            <a href="detalhes_obra.html" class="link_obra">
+            <a href="detalhes_obra.php" class="link_obra">
                 <img src="img_obras/obra3_1.jpg" class="imagem_obra">
             </a>
             <div class="rodape_card">
                 <h2 class="nome_obra">Mancha</h2>
                 <button class="btn_curtir" type="button">
-                    <a href="entrar.html" title="Entrar">
+                    <a href="entrar.php" title="Entrar">
                     <img src="icones/icon_coracao.svg" alt="Curtir" class="icone_curtir">
                     </a>
                     <span class="contador_curtidas">0</span>
@@ -124,20 +86,7 @@
 
 </main>
 
-<!-- RODAPÉ -->
-<footer>
-    <div class="sobre">
-        <a href="about.html">Sobre o Acervo</a>
-    </div>
-    <div class="contato">
-        <a href="link instagram" aria-label="Instagram">
-            <img src="icones/icon_instagram.svg" alt="Instagram">
-        </a>
-        <a href="link email" aria-label="E-mail">
-            <img src="icones/icon_email.svg" alt="E-mail">
-        </a>
-    </div>
-</footer>
+<?php include 'includes/footer.php'; ?>
 
 </body>
 </html>
